@@ -44,14 +44,14 @@ public class Student extends Person{
         return false;
     }
     public String getExtras(){
-        String s ="";
+        String n ="";
         for (int i = 0;i<extras.size();i++){
-            s += extras.get(i);
+            n += extras.get(i);
             if (extras.size()-1!=i){
-                s += ", ";
+                n += ", ";
             }
         }
-        return s;
+        return n;
     }
     public String hasClass (int n){
         return times[n-1];

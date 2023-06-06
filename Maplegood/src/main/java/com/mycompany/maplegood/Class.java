@@ -23,12 +23,20 @@ public class Class {
             this.period = p;
             this.teach = a.getFullName();
         }
+        /**
+         * gets the classes code
+         * @return code
+         */
         public String getCode(){
             return code;
         }
         public String className(){
             return name;
         }
+        /**
+         * adds a student to the class
+         * @param a 
+         */
         public void addStudent(Student a){
             if (a.hasClass(name)){
                 list.add(a);
@@ -79,6 +87,15 @@ public class Class {
         public Student getBest(){
             sortByGrade();
             return list.get(list.size()-1);
+        }
+        
+        public ArrayList<String> getClassList(){
+            ArrayList<String> arr = new ArrayList<String>();
+            sortByLast();
+            for (int i = 0; i<list.size();i++){
+                arr.add(list.get(i).getFullName());
+            }
+            return arr;
         }
 
 }
