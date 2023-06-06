@@ -43,6 +43,16 @@ public class Student extends Person{
             return true;
         return false;
     }
+    public String getExtras(){
+        String s ="";
+        for (int i = 0;i<extras.size();i++){
+            s += extras.get(i);
+            if (extras.size()-1!=i){
+                s += ", ";
+            }
+        }
+        return s;
+    }
     public String hasClass (int n){
         return times[n-1];
     }
