@@ -97,5 +97,16 @@ public class Class {
             }
             return arr;
         }
+        
+        public int getRank(String s){
+            String b = s.toLowerCase();
+            int rank = -1;
+            for(int i = 0;i<list.size();i++){
+                if(list.get(i).getFullName().toLowerCase().equals(b)){
+                    rank = i;
+                }
+        }
+            return rank;
+        }
 
 }
